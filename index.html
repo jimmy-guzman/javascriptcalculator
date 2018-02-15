@@ -12,37 +12,41 @@
 
 <body>
     <div class="container">
-        <input type="text">
+        <form name="displayForm" id="display">
+            <input type="text" name="entries" maxlength="10">
+        </form>
+
         <h3>Javascript Calculator</h3>
         <div class="buttons">
+
             <button>&plus;/&minus;</button>
             <button>&radic;</button>
-            <button>&percnt;</button>
-            <button>&divide;</button>
+            <button data-key="%">&percnt;</button>
+            <button data-key="/">&divide;</button>
 
-            <button data-num="7">7</button>
-            <button data-num="8">8</button>
-            <button data-num="9">9</button>
-            <button>&times;</button>
+            <button class="number" data-key="7">7</button>
+            <button class="number" data-key="8">8</button>
+            <button class="number" data-key="9">9</button>
+            <button data-key="*">&times;</button>
 
-            <button data-num="4">4</button>
-            <button data-num="5">5</button>
-            <button data-num="6">6</button>
-            <button>&minus;</button>
+            <button class="number" data-key="4">4</button>
+            <button class="number" data-key="5">5</button>
+            <button class="number" data-key="6">6</button>
+            <button data-key="-">&minus;</button>
 
-            <button data-num="1">1</button>
-            <button data-num="2">2</button>
-            <button data-num="3">3</button>
-            <button>&plus;</button>
+            <button class="number" data-key="1">1</button>
+            <button class="number" data-key="2">2</button>
+            <button class="number" data-key="3">3</button>
+            <button data-key="+">&plus;</button>
 
-            <button>C</button>
-            <button data-num="0">0</button>
-            <button data-num=".">&sdot;</button>
-            <button>&equals;</button>
+            <button data-key="clear">C</button>
+            <button class="number" data-key="0">0</button>
+            <button class="number" data-key=".">&sdot;</button>
+            <button data-key="=">&equals;</button>
         </div>
     </div>
     <div class="footer">
-        <span>Designed & Coded by
+        <span>Designed &amp; Coded by
             <a href="jimmyguzman.com">Jimmy Guzman</a>
         </span>
     </div>
