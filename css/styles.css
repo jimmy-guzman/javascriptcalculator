@@ -20,14 +20,18 @@ body {
   box-shadow: 0 3px #15407f;
   border-radius: 3px;
 }
+
+form {
+  background: #828170;
+}
 input {
   font-family: "Orbitron", sans-serif;
   font-weight: 700;
   text-align: right;
-  width: 100%;
-  background: #494a44;
   color: #292e27;
   font-size: 24px;
+  width: 100%;
+  background: rgba(73, 74, 68, 0.8);
   border-radius: 3px;
   border: 2px solid #828170;
   outline: none;
@@ -74,7 +78,6 @@ button:active,
   transform: translateY(3px);
 }
 
-
 .number {
   background: #fafafa;
   color: #1e5bb6;
@@ -82,6 +85,8 @@ button:active,
 }
 
 span {
+  display: block;
+  margin-top: 5px;
   font-size: 14px;
   color: #a69580;
   font-family: "Open Sans", sans-serif;
