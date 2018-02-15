@@ -1,7 +1,10 @@
 const keys = document.querySelectorAll("[data-key]");
 
 function handleDisplay(key) {
-  if (displayForm.entries.value.length < 10) {
+  if (key === "NaN") {
+    setTimeout(() => displayForm.reset(), 750);
+  }
+  if (displayForm.entries.value.length < 10 && key != undefined) {
     displayForm.entries.value += key;
   }
 }
@@ -21,10 +24,10 @@ function evaluate() {
 }
 
 function fix(value) {
-  if (value % 1 != 0) {
+  if (value % 1 !== 0) {
     let rounded = Math.round(value);
     let length = String(rounded).length;
-    return 9 - length;
+    return 10 - length;
   } else {
     return 0;
   }
@@ -38,7 +41,7 @@ function sqrt() {
   handleDisplay(answer.toFixed(fix(answer)));
 }
 
-function handleNumKey(e) {
+function handleNumKey() {
   if (String(this.dataset.key) === "clear") {
     displayForm.reset();
   } else if (String(this.dataset.key) === "=") {
